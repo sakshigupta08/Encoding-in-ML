@@ -11,3 +11,9 @@ For example, “red” is 1, “green” is 2, and “blue” is 3. This is call
 ### OneHot Encoding
 For categorical variables where no ordinal relationship exists, the integer encoding may not be enough, at best, or misleading to the model at worst. 
 In this case, a one-hot encoding can be applied to the ordinal representation. This is where the integer encoded variable is removed and one new binary variable is added for each unique integer value in the variable. In the “color” variable example, there are three categories, and, therefore, three binary variables are needed. A “1” value is placed in the binary variable for the color and “0” values for the other colors. We can demonstrate the usage of the OneHotEncoder on the color categories. First the categories are sorted, in this case alphabetically because they are strings, then binary variables are created for each category in turn. This means blue will be represented as [1, 0, 0] with a “1” in for the first binary variable, then green, then finally red. 
+[['red']
+ ['green']
+ ['blue']]
+[[0. 0. 1.]
+ [0. 1. 0.]
+ [1. 0. 0.]]
